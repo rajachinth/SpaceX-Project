@@ -50,7 +50,8 @@ export class DisplayDataComponent implements OnInit {
               }
             );
           }
-          this.spinner = of(false);
+          if(this.route.snapshot.queryParamMap.keys.length == 0)
+            this.spinner = of(false);
         },
         (error) => {
           console.log(error);
