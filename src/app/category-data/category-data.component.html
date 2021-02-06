@@ -1,0 +1,38 @@
+<section>
+  <p id="filterTitle">Filters</p>
+  <p id="launchYear">Launch Year</p>
+  <div id="yearList">
+    <a
+      id="id_001"
+      class="YearData"
+      *ngFor="let year of yearData; index as i"
+      [class.active]="selectedYear === year"
+      (click)="clickYear(year)"
+      >{{ year }}</a
+    >
+  </div>
+  <br style="clear: both" />
+  <p id="launchYear">Successful Launch</p>
+  <div id="yearList">
+    <a
+      id="id_001"
+      class="LaunchData"
+      *ngFor="let launchData of LaunchData; index as i"
+      [class.active]="selectedLaunch === launchData"
+      (click)="clickLaunch(launchData)"
+      >{{ launchData }}</a
+    >
+  </div>
+  <br style="clear: both" />
+  <p id="launchYear">Successful Landing</p>
+  <div id="yearList">
+    <a
+      id="id_001"
+      class="LandingData"
+      *ngFor="let landingData of LandingData; index as i"
+      [class.active]="selectedLanding === landingData"
+      (click)="clickLanding(landingData)"
+      >True</a
+    >
+  </div>
+</section>

@@ -1,0 +1,13 @@
+p {
+    margin: 0 !important;
+  }
+  
+  #page_Owner {
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    padding: 30px;
+    background-color: #f2f2f2;
+  }

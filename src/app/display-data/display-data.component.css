@@ -1,0 +1,100 @@
+.card {
+  width: 22%;
+  margin: 3% 1.5% 3% 1.5%;
+  float: left;
+  font-size: 14px;
+}
+.card-img {
+  height: 200px;
+}
+.card-body {
+  padding: 10px;
+  color: #20639b;
+}
+p {
+  margin: 5% 0;
+  font-weight: 500;
+}
+ul {
+  margin: 0;
+}
+h5 {
+  color: #20639b;
+}
+span {
+  font-weight: 900;
+  color: black;
+  width: 50%;
+}
+#emptyWindow {
+  margin-top: 45%;
+  text-align: center;
+  font-weight: 900;
+  color: red;
+}
+#spinner001 {
+  margin-top: 45%;
+  text-align: center;
+}
+#pagination {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+@media (min-width: 701px) {
+  h5 {
+    font-size: 12px;
+  }
+  .card {
+    font-size: 8px;
+  }
+}
+@media (min-width: 901px) {
+  h5 {
+    font-size: 14px;
+  }
+  .card {
+    font-size: 10px;
+  }
+}
+@media (min-width: 901px) {
+  h5 {
+    font-size: 16px;
+  }
+  .card {
+    font-size: 12px;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    width: 30%;
+    margin-left: 35%;
+  }
+  .card {
+    width: 100%;
+    margin: 3% 0%;
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  .card {
+    font-size: 8px;
+  }
+}
+@media (max-width: 600px) {
+  section {
+    width: 50%;
+    margin-left: 25%;
+  }
+  #pagination {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    transform: translateX(-10%);
+  }
+}

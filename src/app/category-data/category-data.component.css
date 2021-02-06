@@ -1,0 +1,99 @@
+section {
+  height: auto;
+}
+
+#filterTitle {
+  margin: 3%;
+  font-weight: 900;
+}
+
+#launchYear {
+  width: 60%;
+  font-size: 14px;
+  box-shadow: 0 1px 2px 0 grey;
+  text-align: center;
+  margin: 5% 20%;
+  padding: 5px 0;
+}
+
+#yearList {
+  font-size: 14px;
+}
+
+#id_001 {
+  margin: 5%;
+  width: 35%;
+  float: left;
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid #61ec617a;
+  text-align: center;
+  background-color: #61ec617a;
+}
+
+.active {
+  border: 1px solid #60ee60 !important;
+  background-color: #60ee60 !important;
+}
+a:visited,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+a {
+  color: black;
+}
+
+@media (min-width: 701px) {
+  section {
+    font-size: 12px;
+  }
+  #launchYear {
+    font-size: 8px;
+  }
+
+  #yearList {
+    font-size: 8px;
+  }
+}
+@media (min-width: 901px) {
+  section {
+    font-size: 14px;
+  }
+  #launchYear {
+    font-size: 10px;
+  }
+
+  #yearList {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1025px) {
+  section {
+    font-size: 16px;
+  }
+  #launchYear {
+    font-size: 12px;
+  }
+
+  #yearList {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  section {
+    height: auto;
+    font-size: 14px;
+  }
+  #launchYear {
+    font-size: 8px;
+  }
+
+  #yearList {
+    font-size: 8px;
+  }
+}
+@media (max-width: 600px) {
+}

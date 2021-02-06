@@ -1,0 +1,55 @@
+<section>
+  <div *ngIf="spaceX_Data.length == 0 && !(spinner | async)" id="emptyWindow">
+    No Data To Display
+  </div>
+  <div id="spinner001" *ngIf="spinner | async; else tmp01">
+    <div class="spinner-border" role="status"></div>
+  </div>
+  <ng-template #tmp01>
+    <div
+      class="card"
+      *ngFor="
+        let cardData of spaceX_Data
+          | paginate: { itemsPerPage: 8, currentPage: p }
+      "
+    >
+      <img src="{{ cardData.links.mission_patch }}" class="card-img-top" />
+      <!-- <p>{{cardData | json}}</p> -->
+      <div class="card-body">
+        <h5 class="card-title">{{ cardData.mission_name }}</h5>
+        <div class="card-text">
+          <span>Mission IDs:</span>
+          <ul>
+            <li *ngFor="let missionID of cardData.mission_id; index as i">
+              {{ missionID }}
+            </li>
+            <!-- <li *ngIf="spaceX_Data['mission_id'].length == 0">
+                    no data found
+                  </li> -->
+          </ul>
+        </div>
+        <p class="card-text">
+          <span>Launch Year:</span>
+          {{ cardData.launch_year }}
+        </p>
+        <div class="card-text" style="display: flex; margin-top: 5%">
+          <div style="width: 50%; font-weight: 900; color: black">
+            Successful Launch:
+          </div>
+          <div style="width: 50%; font-weight: 500">
+            {{ cardData.launch_success }}
+          </div>
+        </div>
+        <div class="card-text" style="display: flex; margin-top: 5%">
+          <div style="width: 50%; font-weight: 900; color: black">
+            Successful Landing:
+          </div>
+          <div style="width: 50%; font-weight: 500">no data available</div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</section>
+<div id="pagination" *ngIf="!(spinner | async) && spaceX_Data.length > 0">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
