@@ -50,6 +50,7 @@ export class DisplayDataComponent implements OnInit {
               }
             );
           }
+          this.spinner = of(false);
         },
         (error) => {
           console.log(error);
